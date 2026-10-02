@@ -1,9 +1,9 @@
 import requests
+import json
+response=requests.get("http://api-colombia.com/api/v1/TypicalDish")
+platos=json.loads(response.content)
 
 def main():
-    url = "http://api-colombia.com/api/v1/TypicalDish"
-    platos = requests.get(url).json()
-
     print("MENÚ ")
     for plato in platos:
         print(plato["id"], "-", plato["name"])

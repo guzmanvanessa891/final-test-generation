@@ -1,5 +1,11 @@
 import requests
-import json 
+
+
+def dish_fetch(num):
+    url = f"http://api-colombia.com/api/v1/TypicalDish/{num}"
+    response = requests.get(url)
+    return response.json()
+
 
 def main():
     url = "http://api-colombia.com/api/v1/TypicalDish"
