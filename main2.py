@@ -4,7 +4,7 @@ def main():
     url = "http://api-colombia.com/api/v1/TypicalDish"
     platos = requests.get(url).json()
 
-    print("--- MENÚ ---")
+    print("MENÚ ")
     for plato in platos:
         print(plato["id"], "-", plato["name"])
 
